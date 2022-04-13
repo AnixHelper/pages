@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>* {
+        margin: 0;
+        padding: 0
+    }
+
+    body {
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.4
+    }
+
+    a {
+        color: #f04e4e
+    }</style>
+</head>
+<body>
+<p id="maintenance" style="color: red;font-weight: bold;padding-bottom: 20px"></p>
+1. Проверьте стабильность интернет-соединения<br>
+2. Возможно, возникли неполадки с нашей стороны или проводятся технические работы. Проверьте информацию в наших
+социальных сетях <a href="https://t.me/anixart_tv">Telegram</a> и <a href="https://vk.com/anixart_tv">ВКонтакте</a><br>
+3. Попробуйте перезагрузить устройство или переустановить приложение <a href="https://anixart.tv/">с нашего
+    сайта</a><br>
+
+<script>
+    const dark = new URL(window.location.href).searchParams.get("dark");
+    if (dark === "true") {
+        document.body.style.backgroundColor = "#252525";
+        document.body.style.color = "#E0E0E0"
+    } else {
+        document.body.style.backgroundColor = "#FFFFFF";
+        document.body.style.color = "#212121"
+    }
+
+    const maintenance = document.getElementById("maintenance");
+    const curHr = parseInt(new Date().toLocaleString("ru-RU", {timeZone: "Europe/Moscow", hour: 'numeric'}));
+    const curMin = parseInt(new Date().toLocaleString("ru-RU", {timeZone: "Europe/Moscow", minute: 'numeric'}));
+    if ((curHr === 2 && (curMin >= 30 && curMin <= 40)) ||
+        (curHr === 4 && (curMin >= 10 && curMin <= 20)) ||
+        (curHr === 5 && (curMin >= 0 && curMin <= 5))) {
+        maintenance.innerHTML += "Сейчас проводятся ежедневные техничские работы, которые не займут больше 5 минут. Пожалуйста, подождите.";
+    } else
+        maintenance.style.display = "none"
+</script>
+</body>
+</html>
