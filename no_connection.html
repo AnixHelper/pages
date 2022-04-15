@@ -67,7 +67,7 @@
     const curHr = parseInt(new Date().toLocaleString("ru-RU", {timeZone: "Europe/Moscow", hour: 'numeric'}));
     const curMin = parseInt(new Date().toLocaleString("ru-RU", {timeZone: "Europe/Moscow", minute: 'numeric'}));
 
-    if ((curHr === 2 && (curMin >= 30 && curMin <= 50)) ||
+    if ((curHr === 2 && (curMin >= 30 && curMin <= 40)) ||
         (curHr === 4 && (curMin >= 10 && curMin <= 20)) ||
         (curHr === 5 && (curMin >= 0 && curMin <= 5))) {
         dailyMaintenance.innerHTML += "Сейчас проводятся ежедневные техничские работы, которые не займут больше 5 минут. Пожалуйста, подождите.";
