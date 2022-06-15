@@ -34,7 +34,7 @@
 <p id="daily-maintenance" style="color: red;font-weight: bold;padding-bottom: 20px"></p>
 <details id="daily-maintenance-details">
     <summary>Когда проводятся ежедневные технические работы?</summary>
-    <p>Ежедневно примерно в 2:20 и 4:20 ночи по МСК, а также в 5:00 по средам. Работы не занимают больше 5 минут.</p>
+    <p>Ежедневно примерно в 4:15 ночи по МСК, а также в 5:00 по средам. Работы обычно не занимают больше 5 минут.</p>
 </details>
 
 <div id="main-content">
@@ -67,8 +67,7 @@
     const curHr = parseInt(new Date().toLocaleString("ru-RU", {timeZone: "Europe/Moscow", hour: 'numeric'}));
     const curMin = parseInt(new Date().toLocaleString("ru-RU", {timeZone: "Europe/Moscow", minute: 'numeric'}));
 
-    if ((curHr === 2 && (curMin >= 15 && curMin <= 30)) ||
-        (curHr === 4 && (curMin >= 10 && curMin <= 20)) ||
+    if ((curHr === 4 && (curMin >= 10 && curMin <= 30)) ||
         (curHr === 5 && (curMin >= 0 && curMin <= 5))) {
         dailyMaintenance.innerHTML += "Сейчас проводятся ежедневные техничские работы, которые не займут больше 5 минут. Пожалуйста, подождите.";
         mainContent.style.display = "none"
