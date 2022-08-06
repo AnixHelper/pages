@@ -31,50 +31,6 @@
     </style>
 </head>
 <body>
-<p id="daily-maintenance" style="color: red;font-weight: bold;padding-bottom: 20px"></p>
-<details id="daily-maintenance-details">
-    <summary>Когда проводятся ежедневные технические работы?</summary>
-    <p>Ежедневно примерно в 4:15 и 5:00 утра по МСК. Работы обычно не занимают больше 5 минут.</p>
-</details>
-
-<div id="main-content">
-    <p>1. Проверьте стабильность интернет-соединения. Возможно, возникли неполадки у вашего интернет-провайдера</p>
-    <p>2. Возможно, возникли неполадки с нашей стороны или проводятся технические работы. Проверьте информацию в наших социальных сетях <a href="https://t.me/anixart_tv">Telegram</a> и <a href="https://vk.com/anixart_tv">ВКонтакте</a></p>
-    <p>3. Попробуйте перезагрузить устройство или переустановить приложение <a href="https://anixart.tv/">с нашего сайта</a></p>
-    <p>4. Воспользуйтесь VPN, скачать можно <a href="https://play.google.com/store/search?q=vpn">из Google Play</a></p>
-    <br>
-</div>
-
-<details>
-    <summary>Информация о блокировке в Украине</summary>
-    <p>Доступ к приложению ограничивается интернет-провайдерами на территории Украины. Если вы испытываете проблемы, перейдите в Настройки и включите опцию «Альтернативное соединение». Если это не поможет, отключите эту опцию и воспользуйтесь VPN.</p>
-</details>
-
-<script>
-    const dark = new URL(window.location.href).searchParams.get("dark");
-    if (dark === "true") {
-        document.body.style.backgroundColor = "#252525";
-        document.body.style.color = "#E0E0E0"
-    } else {
-        document.body.style.backgroundColor = "#FFFFFF";
-        document.body.style.color = "#212121"
-    }
-
-    const dailyMaintenance = document.getElementById("daily-maintenance");
-    const dailyMaintenanceDetails = document.getElementById("daily-maintenance-details");
-    const mainContent = document.getElementById("main-content");
-
-    const curHr = parseInt(new Date().toLocaleString("ru-RU", {timeZone: "Europe/Moscow", hour: 'numeric'}));
-    const curMin = parseInt(new Date().toLocaleString("ru-RU", {timeZone: "Europe/Moscow", minute: 'numeric'}));
-
-    if ((curHr === 4 && (curMin >= 10 && curMin <= 30)) ||
-        (curHr === 5 && (curMin >= 0 && curMin <= 5))) {
-        dailyMaintenance.innerHTML += "Сейчас проводятся ежедневные технические работы, которые не займут больше 5 минут. Пожалуйста, подождите.";
-        mainContent.style.display = "none"
-    } else {
-        dailyMaintenance.style.display = "none"
-        dailyMaintenanceDetails.style.display = "none"
-    }
-</script>
+<p id="daily-maintenance" style="color: red;font-weight: bold;padding-bottom: 20px">Из-за возникших технических проблем приложение на данный момент может работать нестабильно. В ближайшие сутки работа будет налажена, проносим извинения за неудобства Т_Т</p>
 </body>
 </html>
