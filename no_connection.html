@@ -34,10 +34,13 @@
 <p id="daily-maintenance" style="color: red;font-weight: bold;padding-bottom: 20px"></p>
 <details id="daily-maintenance-details">
     <summary>Когда проводятся ежедневные технические работы?</summary>
-    <p>Ежедневно примерно в 4:30 и 5:00 утра по МСК. Работы обычно не занимают больше 5-10 минут.</p>
+    <p>Во второник и среду в 5:00 утра по МСК. Работы обычно не занимают больше 10 минут.</p>
 </details>
 
 <div id="main-content">
+    <p style="color: #E65100;"><b>⚙️ У нас возникли технические проблемы со стороны сервера. Уже изучаем проблему, постараемся наладить работу как можно скорее. Приносим извинения за неудобства! Т_Т</b></p>
+    <p><b>Актуальная информация доступна в нашем <a href="https://t.me/anixart">Telegram-канале</a></b></p>
+    <br>
     <p>1. Проверьте стабильность интернет-соединения. Возможно, возникли неполадки у вашего интернет-провайдера</p>
     <p>2. Возможно, возникли неполадки с нашей стороны или проводятся технические работы. Проверьте информацию в наших социальных сетях <a href="https://t.me/anixart_tv">Telegram</a> и <a href="https://vk.com/anixart_tv">ВКонтакте</a></p>
     <p>3. Попробуйте перезагрузить устройство или переустановить приложение <a href="https://anixart.tv/">с нашего сайта</a></p>
@@ -67,9 +70,8 @@
     const curHr = parseInt(new Date().toLocaleString("ru-RU", {timeZone: "Europe/Moscow", hour: 'numeric'}));
     const curMin = parseInt(new Date().toLocaleString("ru-RU", {timeZone: "Europe/Moscow", minute: 'numeric'}));
 
-    if ((curHr === 4 && (curMin >= 29 && curMin <= 34)) ||
-        (curHr === 5 && (curMin >= 0 && curMin <= 15))) {
-        dailyMaintenance.innerHTML += "Сейчас проводятся ежедневные технические работы, которые не займут больше 5-10 минут. Пожалуйста, подождите.";
+    if (curHr === 5 && (curMin >= 0 && curMin <= 15)) {
+        dailyMaintenance.innerHTML += "Сейчас проводятся ежедневные технические работы, которые не займут больше 10 минут. Пожалуйста, подождите.";
         mainContent.style.display = "none"
     } else {
         dailyMaintenance.style.display = "none"
