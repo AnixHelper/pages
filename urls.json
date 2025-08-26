@@ -6,5 +6,5 @@
   "ua": {
     "api_url": "https://api-s.anixsekai.com/",
     "should_use_mirror_urls": true
-  },
+  }
 }
