@@ -4,7 +4,7 @@
     "should_use_mirror_urls": false
   },
   "ru": {
-    "api_url": "https://api.anixsekai.com/",
+    "api_url": "https://api-s2.anixsekai.com/",
     "should_use_mirror_urls": false
   },
   "ua": {
