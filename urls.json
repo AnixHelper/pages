@@ -8,7 +8,7 @@
     "should_use_mirror_urls": false
   },
   "ua": {
-    "api_url": "https://api-s.anixsekai.com/",
+    "api_url": "https://api.anixsekai.com/",
     "should_use_mirror_urls": true
   }
 }
